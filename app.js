@@ -6,12 +6,8 @@ const port = 3000;
 
 const mainRouter = require("./routes/main");
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.use("/", mainRouter);
-
-// app.get("/", (req, res, next) => {
-//   res.sendFile(path.join(__dirname, './views/index.html'));
-// });
-
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`);

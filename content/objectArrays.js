@@ -9,6 +9,14 @@ const objArray = [
         id: "page2",
         title: "this is page 2",
         content: "this will be page 2 content.", 
+        links: [
+            {
+                linkTitle: "link 1",
+            },
+            {
+                linkTitle: "link 2",
+            },
+        ],
     },
     {
         id: "page3",

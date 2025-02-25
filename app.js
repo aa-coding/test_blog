@@ -4,10 +4,19 @@ const path = require("path");
 const app = express();
 const port = 3000;
 
-const mainRouter = require("./routes/main");
+const makePage = require("./javascript/makeContent.js");
+
+//first, render html files, function saves .html files in public folder
+const pages = ["page1", "page2", "page3"];
+pages.forEach( (page) => makePage("page", page));
+
+const posts = ["post1", "post2"];
+posts.forEach( (post) => makePage("post", post)); 
+
+//const mainRouter = require("./routes/main");
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use("/", mainRouter);
+//app.use("/", mainRouter);
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`);

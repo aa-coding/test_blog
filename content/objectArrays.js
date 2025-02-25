@@ -1,4 +1,4 @@
-const objArray = [
+const mainPageArray = [
     {
         id: "page1",
         title: "this is page 1",
@@ -12,9 +12,13 @@ const objArray = [
         links: [
             {
                 linkTitle: "link 1",
+                linkImgSrc: "/images/winebottle612x612.jpg",
+                href: "/blog/post1.html",
             },
             {
                 linkTitle: "link 2",
+                linkImgSrc: "/images/winebottle612x612.jpg",
+                href: "/blog/post2.html",
             },
         ],
     },
@@ -25,4 +29,22 @@ const objArray = [
     },
 ];
 
-module.exports = (objArray);
+const postsArray = [
+
+    {
+        id: "post1",
+        title: "this is post 1",
+        content: "this will be post 1 content.", 
+
+    },
+
+    {
+        id: "post2",
+        title: "this is post 2",
+        content: "this will be post 2 content.", 
+
+    },
+
+];
+
+module.exports = { mainPageArray, postsArray };

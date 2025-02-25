@@ -1,18 +1,4 @@
-const objArrays = require("../content/objectArrays.js"); 
-const fs = require('fs');
 
-const makePage = (pageType, ID) => {
-    
-    let obj;
-    if (pageType === "post") { obj = objArrays.postsArray.filter( (obj) => (obj.id === ID))[0]; };
-    if (pageType === "page") { obj = objArrays.mainPageArray.filter( (obj) => (obj.id === ID))[0] }; 
-    const title = obj.title;
-    let content;
-    let linksString = ""; 
-    if (obj.content) {content = obj.content}; 
-    if (obj.links) { (obj.links).forEach( (link) => { linksString = linksString + ` <a href=${link.href}><h3>${link.linkTitle}</h3><img src=${link.linkImgSrc}> </a>`}) };
-
-    const htmlContent = `
 
     <!DOCTYPE html>
     <html lang="en">
@@ -42,10 +28,10 @@ const makePage = (pageType, ID) => {
                 </div>
             </nav>
             <section id="content">
-                <h2>${title}</h2>
-                <p>${content}</p>
+                <h2>this is page 1</h2>
+                <p>this will be page 1 content.</p>
                 <div id="links">
-                    ${linksString}
+                    
                 </div>    
             </section>
             <footer>
@@ -54,21 +40,4 @@ const makePage = (pageType, ID) => {
         </div>
     </body>
     </html>
-    `;
     
-    if (pageType === "post") {
-        fs.writeFile(`./public/blog/${ID}.html`, htmlContent, (error) => {
-            if (error) throw (error);
-            console.log("creating html file");
-        } );
-    };
-    if (pageType === "page") {
-        fs.writeFile(`./public/${ID}.html`, htmlContent, (error) => {
-            if (error) throw (error);
-            console.log("creating html file");
-        } );
-    };
-};
-
-
-module.exports = makePage;

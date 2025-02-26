@@ -24,7 +24,7 @@ const mainPageArray = [
     },
     {
         id: "page3",
-        title: "this is page 2",
+        title: "this is page 3",
         content: "this will be page 3 content.", 
     },
 ];

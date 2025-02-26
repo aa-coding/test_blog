@@ -1,5 +1,8 @@
 const objArrays = require("../content/objectArrays.js"); 
 const fs = require('fs');
+//const path = require("path");
+
+//note: express.static means /public doesn't have to be included in path(?)
 
 const makePage = (pageType, ID) => {
     
@@ -21,19 +24,18 @@ const makePage = (pageType, ID) => {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="index.css" />
+            <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href=${ pageType === "page" ? "index.css" : "../index.css" }>
             <title>Blog Site</title>
     </head>
     <body>
         <div class="wrapper">
             <header>
-                <h1>
+                <span>
                     Blog Site
-                </h1>
+                </span>
             </header>
             <nav>
-                <h3>Navigation</h3>
                 <div id="page-links">
                     <a href="/" class="nav-link" id="home">home</a>
                     <a href="/page1.html" class="nav-link" id="page1">page 1</a>
@@ -59,13 +61,13 @@ const makePage = (pageType, ID) => {
     if (pageType === "post") {
         fs.writeFile(`./public/blog/${ID}.html`, htmlContent, (error) => {
             if (error) throw (error);
-            console.log("creating html file");
+            console.log(`creating ${ID}.html file`);
         } );
     };
     if (pageType === "page") {
         fs.writeFile(`./public/${ID}.html`, htmlContent, (error) => {
             if (error) throw (error);
-            console.log("creating html file");
+            console.log(`creating ${ID}.html file`);
         } );
     };
 };

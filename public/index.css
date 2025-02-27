@@ -46,30 +46,43 @@ body {
 }
 
 header {
-    text-align: center;
     color: black;
     font-family: 'Averia Serif Libre', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    height: 4rem;
-    padding: 1rem;
     position: sticky;
     top: 0;
     background-color: white;
+    padding: 1rem;
 }
 
-header span {
+#headerdiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#headerdiv img {
+    height: 1.5rem;
+    margin-right: auto;
+   
+}
+
+#headerdiv a {
     vertical-align: middle;
     font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    margin-right: auto;
 }
 
 nav {
-    display: flex;
     padding-left: 1.4rem;
     padding-right: 1.4rem;
     padding-top: .9rem;
     padding-bottom: .9rem;
-    align-items: center;
+    justify-content: center;
     height: 2rem;
     font-size: 14.5px;
+    display: none;
 }
 
 nav a {
@@ -80,8 +93,9 @@ nav a {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    align-items: center;
+    justify-content: center;
     gap: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #banner {
@@ -101,6 +115,20 @@ nav a {
 }
 
 #banner p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#banner a {
+    background-color: transparent;
+    color: white;
+    border: 1px, solid, white;
+    display: inline-block;
+    font-size: .8rem;
+    width: 9rem;
+    height: 3rem;
+    padding: .9rem;
+    text-decoration: none;
 
 }
 

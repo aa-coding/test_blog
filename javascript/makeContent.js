@@ -31,19 +31,21 @@ const makePage = (pageType, ID) => {
     </head>
     <body>
         <div class="wrapper">
-            <header>
-                <span>
+             <header>
+                <div id="headerdiv">
+                    <img id="menu" src="/assets/Hamburger_icon.svg">
+                    <a href="/">
                     Blog Site
-                </span>
-            </header>
-            <nav>
-                <div id="page-links">
-                    <a href="/" class="nav-link" id="home">home</a>
-                    <a href="/page1.html" class="nav-link" id="page1">page 1</a>
-                    <a href="/page2.html" class="nav-link" id="page2">page 2</a>
-                    <a href="/page3.html" class="nav-link" id="page3">page 3</a>
+                    </a>
                 </div>
-            </nav>
+                <nav>
+                    <div id="page-links">
+                        <a href="/page1.html" class="nav-link" id="page1">page 1</a>
+                        <a href="/page2.html" class="nav-link" id="page2">page 2</a>
+                        <a href="/page3.html" class="nav-link" id="page3">page 3</a>
+                    </div>   
+                </nav>
+            </header>
             <section id="content">
                 <h2>${title}</h2>
                 <p>${content}</p>
@@ -55,6 +57,12 @@ const makePage = (pageType, ID) => {
                 <span>by aa-coding, February 2025</span>
             </footer>
         </div>
+        <script>
+        document.querySelector("#menu").addEventListener("click", () => {
+            const menubar = document.querySelector("nav");
+            menubar.style.display === "none" ? menubar.style.display = "block" : menubar.style.display = "none";
+        });
+        </script>
     </body>
     </html>
     `;

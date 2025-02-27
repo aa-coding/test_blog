@@ -49,12 +49,16 @@ header {
     text-align: center;
     color: black;
     font-family: 'Averia Serif Libre', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    height: 3.75rem;
+    height: 4rem;
     padding: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
 }
 
 header span {
-    font-size: 32px;
+    vertical-align: middle;
+    font-size: 1.8rem;
 }
 
 nav {
@@ -77,15 +81,53 @@ nav a {
     margin-left: auto;
     margin-right: auto;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 #banner {
     background-image: url('/images/vineyard612x612.jpg');
     background-size: cover;
     color: white;
+    height: 34rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+
+#banner h2 {
+    padding-top: 20rem;
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+#banner p {
+
+}
+
+#content {
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 #content h2 {
+    font-size: 2rem;
     font-family: 'Averia Serif Libre', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: .5rem;
+}
+
+#content p {
+    line-height: 1.5rem;
+
+}
+
+footer {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+footer span {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: .8rem;
 }

@@ -3,6 +3,7 @@ const fs = require('fs');
 //const path = require("path");
 
 //note: express.static means /public doesn't have to be included in path(?)
+//TO DO: title is anchor element that goes home, css hamburger menu
 
 const makePage = (pageType, ID) => {
     

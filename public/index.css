@@ -133,7 +133,7 @@ nav a {
 }
 
 #content {
-    padding-top: 1.5rem;
+    padding-top: 3rem;
     padding-left: 1rem;
     padding-right: 1rem;
 }
@@ -141,21 +141,70 @@ nav a {
 #content h2 {
     font-size: 2rem;
     font-family: 'Averia Serif Libre', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-bottom: .5rem;
+}
+
+#home-h2 {
+    margin-bottom: 2rem;
 }
 
 #content p {
     line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
 
+#links {
+    text-align: center;
+}
+
+#links p {
+    margin-top: 1.3rem;
+    margin-bottom: 0;
+}
+
+.post-link {
+    display: flex;
+    flex-direction: column; 
+    text-decoration: none;
+    color: black;
+}
+
+.post-link img {
+    padding-top: 1.9rem;
+    height: 13rem;
+    width: 100%;
+    margin-bottom: .8rem;
+    object-fit: cover;
+}
+
+.post-link h3 {
+    display: flex;
+    margin-top: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+#link-date {
+    align-self: start;
+    margin-left: 1rem;
+    font-size: .8rem;
 }
 
 footer {
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
 }
 
+footer a {
+    margin-left: auto;
+    text-decoration: none;
+    color: black;
+}
+
 footer span {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin-right: auto;
     font-size: .8rem;
 }

@@ -3,7 +3,7 @@ const fs = require('fs');
 //const path = require("path");
 
 //note: express.static means /public doesn't have to be included in path(?)
-//TO DO: title is anchor element that goes home, css hamburger menu
+//TO DO: breakpoints for responsive design, ie. hamburger menu becomes 
 
 const makePage = (pageType, ID) => {
     
@@ -13,8 +13,10 @@ const makePage = (pageType, ID) => {
     const title = obj.title;
     let content;
     let linksString = ""; 
-    if (obj.content) {content = obj.content}; 
-    if (obj.links) { (obj.links).forEach( (link) => { linksString = linksString + ` <a href=${link.href}><h3>${link.linkTitle}</h3><img src=${link.linkImgSrc}> </a>`}) };
+    if (obj.content) { content = obj.content; }; 
+    if (obj.links) {
+        (obj.links).forEach( (link) => { linksString = linksString + ` <a href=${link.href} class="post-link"><img src=${link.linkImgSrc}><h3>${link.linkTitle}<span id="link-date">${link.date}<span></h3> </a>`}); 
+    };
 
     const htmlContent = `
 
@@ -26,7 +28,7 @@ const makePage = (pageType, ID) => {
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href=${ pageType === "page" ? "index.css" : "../index.css" }>
+            <link rel="stylesheet" href=${pageType === "page" ? "index.css" : "../index.css"}>
             <title>Blog Site</title>
     </head>
     <body>
@@ -35,7 +37,7 @@ const makePage = (pageType, ID) => {
                 <div id="headerdiv">
                     <img id="menu" src="/assets/Hamburger_icon.svg">
                     <a href="/">
-                    Blog Site
+                        Blog Site
                     </a>
                 </div>
                 <nav>
@@ -48,13 +50,15 @@ const makePage = (pageType, ID) => {
             </header>
             <section id="content">
                 <h2>${title}</h2>
-                <p>${content}</p>
-                <div id="links">
+                <p style="${obj.content ? "display: inline" : "display: none"}">${content}</p>
+                <div id="links" style="${obj.links ? "display: block" : "display: none"}">
+                    <p>LATEST</p>
                     ${linksString}
                 </div>    
             </section>
-            <footer>
+            <footer> 
                 <span>by aa-coding, February 2025</span>
+                <a href="#top">&gt; back to top &lt;</a>
             </footer>
         </div>
         <script>

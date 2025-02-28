@@ -5,23 +5,27 @@ const mainPageArray = [
         content: "this will be page 1 content.", 
 
     },
+
     {
         id: "page2",
-        title: "this is page 2",
-        content: "this will be page 2 content.", 
+        title: "Posts",
         links: [
             {
-                linkTitle: "link 1",
+                linkTitle: '"Post 1 title here"',
+                date: "BY Aaron | FEB 26 2025",
                 linkImgSrc: "/images/winebottle612x612.jpg",
                 href: "/blog/post1.html",
             },
+
             {
-                linkTitle: "link 2",
+                linkTitle: '"Post 2 title Here"',
+                date: "BY Aaron | FEB 26 2025",
                 linkImgSrc: "/images/winebottle612x612.jpg",
                 href: "/blog/post2.html",
             },
         ],
     },
+
     {
         id: "page3",
         title: "this is page 3",
@@ -33,14 +37,14 @@ const postsArray = [
 
     {
         id: "post1",
-        title: "this is post 1",
+        title: '"Post 1 title here"',
         content: "this will be post 1 content.", 
 
     },
 
     {
         id: "post2",
-        title: "this is post 2",
+        title: '"Post 2 title Here"',
         content: "this will be post 2 content.", 
 
     },

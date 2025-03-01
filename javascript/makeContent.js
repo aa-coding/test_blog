@@ -30,7 +30,7 @@ const makePage = (pageType, ID) => {
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href=${pageType === "page" ? "index.css" : "../index.css"}>
+            <link rel="stylesheet" href=${pageType === "page" ? "index.css" : "/test_blog/index.css"}>
             <title>Blog Site</title>
     </head>
     <body>
@@ -44,9 +44,9 @@ const makePage = (pageType, ID) => {
                 </div>
                 <nav>
                     <div id="page-links">
-                        <a href="/page1.html" class="nav-link" id="page1">page 1</a>
-                        <a href="/page2.html" class="nav-link" id="page2">page 2</a>
-                        <a href="/page3.html" class="nav-link" id="page3">page 3</a>
+                        <a href="/test_blog/page1.html" class="nav-link" id="page1">page 1</a>
+                        <a href="/test_blog/page2.html" class="nav-link" id="page2">page 2</a>
+                        <a href="/test_blog/page3.html" class="nav-link" id="page3">page 3</a>
                     </div>   
                 </nav>
             </header>

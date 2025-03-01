@@ -99,7 +99,7 @@ nav a {
 }
 
 #banner {
-    background-image: url('/images/vineyard612x612.jpg');
+    background-image: url('/test_blog/public/images/vineyard612x612.jpg');
     background-size: cover;
     color: white;
     height: 34rem;

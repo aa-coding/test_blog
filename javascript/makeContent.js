@@ -38,7 +38,7 @@ const makePage = (pageType, ID) => {
              <header>
                 <div id="headerdiv">
                     <img id="menu" src="/test_blog/public/assets/Hamburger_icon.svg">
-                    <a href="/">
+                    <a href="/test_blog/index.html">
                         Blog Site
                     </a>
                 </div>

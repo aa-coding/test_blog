@@ -141,6 +141,7 @@ nav a {
 #content h2 {
     font-size: 2rem;
     font-family: 'Averia Serif Libre', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 1.8rem;
 }
 
 #home-h2 {
@@ -150,6 +151,7 @@ nav a {
 #content p {
     line-height: 1.5rem;
     margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
 #links {
@@ -188,6 +190,14 @@ nav a {
     align-self: start;
     margin-left: 1rem;
     font-size: .8rem;
+}
+
+#post-img {
+    height: 13rem;
+    width: 100%;
+    margin-bottom: .8rem;
+    object-fit: cover;
+    margin-bottom: 5rem;
 }
 
 footer {

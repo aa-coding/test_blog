@@ -11,8 +11,11 @@ const makePage = (pageType, ID) => {
     if (pageType === "post") { obj = objArrays.postsArray.filter( (obj) => (obj.id === ID))[0]; };
     if (pageType === "page") { obj = objArrays.mainPageArray.filter( (obj) => (obj.id === ID))[0] }; 
     const title = obj.title;
+    let postImgSrc;
+    obj.postsrc? postImgSrc = `src=${obj.postsrc}` : postImgSrc = "";
     let content;
     let linksString = ""; 
+     
     if (obj.content) { content = obj.content; }; 
     if (obj.links) {
         (obj.links).forEach( (link) => { linksString = linksString + ` <a href=${link.href} class="post-link"><img src=${link.linkImgSrc}><h3>${link.linkTitle}<span id="link-date">${link.date}<span></h3> </a>`}); 
@@ -50,7 +53,9 @@ const makePage = (pageType, ID) => {
             </header>
             <section id="content">
                 <h2>${title}</h2>
+                <img id="post-img" style="${pageType === "post" ? "display: block" : "display: none"}" ${postImgSrc}>
                 <p style="${obj.content ? "display: inline" : "display: none"}">${content}</p>
+                    
                 <div id="links" style="${obj.links ? "display: block" : "display: none"}">
                     <p>LATEST</p>
                     ${linksString}

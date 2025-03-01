@@ -38,7 +38,8 @@ const postsArray = [
     {
         id: "post1",
         title: '"Post 1 title here"',
-        content: "this will be post 1 content.", 
+        content: "this will be post 1 content.",
+        postsrc: "/images/winebottle612x612.jpg", 
 
     },
 
@@ -46,6 +47,7 @@ const postsArray = [
         id: "post2",
         title: '"Post 2 title Here"',
         content: "this will be post 2 content.", 
+        postsrc: "/images/winebottle612x612.jpg",
 
     },
 

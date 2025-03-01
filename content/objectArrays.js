@@ -13,15 +13,15 @@ const mainPageArray = [
             {
                 linkTitle: '"Post 1 title here"',
                 date: "BY Aaron | FEB 26 2025",
-                linkImgSrc: "/images/winebottle612x612.jpg",
-                href: "/blog/post1.html",
+                linkImgSrc: "/test_blog/public/images/winebottle612x612.jpg",
+                href: "/test_blog/public/blog/post1.html",
             },
 
             {
                 linkTitle: '"Post 2 title Here"',
                 date: "BY Aaron | FEB 26 2025",
-                linkImgSrc: "/images/winebottle612x612.jpg",
-                href: "/blog/post2.html",
+                linkImgSrc: "/test_blog/public/images/winebottle612x612.jpg",
+                href: "/test_blog/blog/post2.html",
             },
         ],
     },
@@ -39,7 +39,7 @@ const postsArray = [
         id: "post1",
         title: '"Post 1 title here"',
         content: "this will be post 1 content.",
-        postsrc: "/images/winebottle612x612.jpg", 
+        postsrc: "/test_blog/public/images/winebottle612x612.jpg", 
 
     },
 
@@ -47,7 +47,7 @@ const postsArray = [
         id: "post2",
         title: '"Post 2 title Here"',
         content: "this will be post 2 content.", 
-        postsrc: "/images/winebottle612x612.jpg",
+        postsrc: "/test_blog/public/images/winebottle612x612.jpg",
 
     },
 

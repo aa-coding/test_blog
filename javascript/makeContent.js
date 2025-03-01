@@ -1,6 +1,5 @@
 const objArrays = require("../content/objectArrays.js"); 
 const fs = require('fs');
-//const path = require("path");
 
 //note: express.static means /public doesn't have to be included in path(?)
 //TO DO: breakpoints for responsive design, ie. hamburger menu becomes 
@@ -38,7 +37,7 @@ const makePage = (pageType, ID) => {
         <div class="wrapper">
              <header>
                 <div id="headerdiv">
-                    <img id="menu" src="/assets/Hamburger_icon.svg">
+                    <img id="menu" src="/test_blog/public/assets/Hamburger_icon.svg">
                     <a href="/">
                         Blog Site
                     </a>
@@ -83,7 +82,7 @@ const makePage = (pageType, ID) => {
         } );
     };
     if (pageType === "page") {
-        fs.writeFile(`./public/${ID}.html`, htmlContent, (error) => {
+        fs.writeFile(`./${ID}.html`, htmlContent, (error) => {
             if (error) throw (error);
             console.log(`creating ${ID}.html file`);
         } );
